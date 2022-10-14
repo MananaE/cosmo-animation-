@@ -1,34 +1,79 @@
 /*background example */
 .background-photo {
-	height: 750px;
+	height: 800px;
 	width: 100%;
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-}	
+} 
 .star {
-	width: 70px;
-	height: 60px;
+	width: 150px;
+	height: 150px;
 	z-index: 5;
 	position: absolute;
-	top: 650px;
-	left: 800px;
+	top: 300px;
+	right: 300px;
+	transform:  translate(50px,100px);
 	animation: star 4s infinite
 }
-@keyframes star{ 
-	from {left:12px;}
-	to {left:10px;}
-}
-.moon {
-	width: 70px;
-	height: 60px;
+.star2 {
+	width: 150px;
+	height: 150px;
 	z-index: 5;
 	position: absolute;
-	top: 650px;
-	left: 800px;
-	animation: moon 4s infinite
+	top: 300px;
+	left: 300px;
+	animation: star infinite
+	transform: translate(100px,50px);
+	animation: star 4s infinite;
+}
+@keyframes star{ 
+	from {left:200px;}
+	to {left:50px;}
+	
+}
+.astro {
+	width: 280px;
+	height: 240px;
+	z-index: 5;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	animation: astro 10s infinite;
 }
 
-
+@keyframes astro {
+	from {left: 30px}
+	to {left: 67%}
+}	
+.astroreverse {
+	width: 280px;
+	height: 240px;
+	z-index: 5;
+	position: absolute;
+	bottom: 50px;
+	left: 0px;
+	right: 100px;
+	animation: astroreverse 10s infinite;
+}
+@keyframes astroreverse {
+	from {left: 1200px}
+	to {right: 10%}
+}
+.moon {
+	width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    right: 700px;
+    transform: translate(700px,50px);
+    animation: moon 10s infinite;
+}	
+@keyframes moon	{
+	from {left: 700px}
+	to {right: 50%;}
+}
 
